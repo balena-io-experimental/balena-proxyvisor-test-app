@@ -1,5 +1,8 @@
 FROM resin/%%RESIN_MACHINE_NAME%%-fedora-node:slim
 
+# Install yum dependencies
+ RUN rpm --rebuilddb && yum install -y git && yum clean all && rm -rf /var/lib/rpm
+
 # Save source folder
 RUN printf "%s\n" "${PWD##}" > SOURCEFOLDER
 
