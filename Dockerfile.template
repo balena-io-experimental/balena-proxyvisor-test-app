@@ -1,7 +1,7 @@
 FROM resin/%%RESIN_MACHINE_NAME%%-fedora-node:slim
 
 # Install yum dependencies
- RUN rpm --rebuilddb && dnf install -y git && dnf clean all && rm -rf /var/lib/rpm
+ RUN rpm --rebuilddb && dnf install -y git make automake gcc gcc-c++ kernel-devel && dnf clean all && rm -rf /var/lib/rpm
 
 # Save source folder
 RUN printf "%s\n" "${PWD##}" > SOURCEFOLDER
