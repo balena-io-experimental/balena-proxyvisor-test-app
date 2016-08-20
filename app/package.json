@@ -1,0 +1,34 @@
+{
+  "name": "resin-proxyvisor-test-app",
+  "version": "0.0.1",
+  "description": "A test app for the testing against proxyvisor API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/resin-io-playground/resin-proxyvisor-test-app.git"
+  },
+  "keywords": [
+    "proxy",
+    "visor",
+    "test",
+    "resin",
+    "io"
+  ],
+  "author": "Carlo Maria Curinga <carlo@resin.io>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/resin-io-playground/resin-proxyvisor-test-app/issues"
+  },
+  "jshintConfig": {
+    "esnext": true,
+    "strict": true
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "proxyvisor": "https://github.com/resin-io-modules/proxyvisor-test"
+  },
+  "homepage": "https://github.com/resin-io-playground/resin-proxyvisor-test-app#readme"
+}
