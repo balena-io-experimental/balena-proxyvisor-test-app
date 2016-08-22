@@ -1,7 +1,7 @@
 FROM resin/%%RESIN_MACHINE_NAME%%-fedora-node:slim
 
 # Install yum dependencies
- RUN rpm --rebuilddb && dnf install -y git make automake gcc gcc-c++ kernel-devel && dnf clean all && rm -rf /var/lib/rpm
+ RUN rpm --rebuilddb && dnf install -y python git make automake gcc gcc-c++ kernel-devel && dnf clean all && rm -rf /var/lib/rpm
 
 # Save source folder
 RUN printf "%s\n" "${PWD##}" > SOURCEFOLDER
@@ -19,7 +19,7 @@ RUN JOBS=MAX npm i --unsafe-perm --production && npm cache clean
 CMD ["bash", "/usr/src/app/start.sh"]
 
 # Move app to filesystem
-COPY "$SOURCEFOLDER/app/assets" ./assets/
+#COPY "$SOURCEFOLDER/app/assets" ./assets/
 
 # Copy the start.sh file
 COPY "$SOURCEFOLDER/app/start.sh" ./
